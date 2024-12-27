@@ -8,17 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		5DB090AA2D1A9E9E004E4BE5 /* IOS_HomeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB090A92D1A9E9E004E4BE5 /* IOS_HomeApp.swift */; };
-		5DB090AC2D1A9E9E004E4BE5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB090AB2D1A9E9E004E4BE5 /* ContentView.swift */; };
+		5DB090AC2D1A9E9E004E4BE5 /* LaunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB090AB2D1A9E9E004E4BE5 /* LaunchView.swift */; };
 		5DB090AE2D1A9E9F004E4BE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB090AD2D1A9E9F004E4BE5 /* Assets.xcassets */; };
 		5DB090B12D1A9E9F004E4BE5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DB090B02D1A9E9F004E4BE5 /* Preview Assets.xcassets */; };
+		5DB090B82D1AA502004E4BE5 /* EnableCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB090B72D1AA502004E4BE5 /* EnableCamera.swift */; };
+		5DB090BE2D1D5290004E4BE5 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DB090BD2D1D5290004E4BE5 /* ImagePicker.swift */; };
+		5DE4DA812D1E81F30079AC2A /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE4DA802D1E81F30079AC2A /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5DB090A62D1A9E9E004E4BE5 /* IOS-Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DB090A92D1A9E9E004E4BE5 /* IOS_HomeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HomeApp.swift; sourceTree = "<group>"; };
-		5DB090AB2D1A9E9E004E4BE5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		5DB090AB2D1A9E9E004E4BE5 /* LaunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchView.swift; sourceTree = "<group>"; };
 		5DB090AD2D1A9E9F004E4BE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5DB090B02D1A9E9F004E4BE5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5DB090B72D1AA502004E4BE5 /* EnableCamera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnableCamera.swift; sourceTree = "<group>"; };
+		5DB090BD2D1D5290004E4BE5 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		5DE4DA7F2D1E7CAB0079AC2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		5DE4DA802D1E81F30079AC2A /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +58,12 @@
 		5DB090A82D1A9E9E004E4BE5 /* IOS-Home */ = {
 			isa = PBXGroup;
 			children = (
+				5DE4DA802D1E81F30079AC2A /* Utils.swift */,
+				5DE4DA7F2D1E7CAB0079AC2A /* Info.plist */,
+				5DB090BD2D1D5290004E4BE5 /* ImagePicker.swift */,
+				5DB090B72D1AA502004E4BE5 /* EnableCamera.swift */,
 				5DB090A92D1A9E9E004E4BE5 /* IOS_HomeApp.swift */,
-				5DB090AB2D1A9E9E004E4BE5 /* ContentView.swift */,
+				5DB090AB2D1A9E9E004E4BE5 /* LaunchView.swift */,
 				5DB090AD2D1A9E9F004E4BE5 /* Assets.xcassets */,
 				5DB090AF2D1A9E9F004E4BE5 /* Preview Content */,
 			);
@@ -137,8 +148,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DB090AC2D1A9E9E004E4BE5 /* ContentView.swift in Sources */,
+				5DB090AC2D1A9E9E004E4BE5 /* LaunchView.swift in Sources */,
 				5DB090AA2D1A9E9E004E4BE5 /* IOS_HomeApp.swift in Sources */,
+				5DB090BE2D1D5290004E4BE5 /* ImagePicker.swift in Sources */,
+				5DB090B82D1AA502004E4BE5 /* EnableCamera.swift in Sources */,
+				5DE4DA812D1E81F30079AC2A /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +289,10 @@
 				DEVELOPMENT_TEAM = M37US2ARRH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IOS-Home/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to take pictures.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to save image to Camera roll.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +322,10 @@
 				DEVELOPMENT_TEAM = M37US2ARRH;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "IOS-Home/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need access to the camera to take pictures.";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "We need access to save image to Camera roll.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
